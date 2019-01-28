@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>no2s</title><link href="https://dyesac.github.io/" rel="alternate"></link><link href="https://dyesac.github.io/feeds/all.atom.xml" rel="self"></link><id>https://dyesac.github.io/</id><updated>2019-01-24T00:00:00+09:00</updated><entry><title>Pelican 記事タイトル</title><link href="https://dyesac.github.io/posts/2019-01-24T0000_pelican-ji-shi-taitoru.html" rel="alternate"></link><published>2019-01-24T00:00:00+09:00</published><updated>2019-01-24T00:00:00+09:00</updated><author><name>dyesac</name></author><id>tag:dyesac.github.io,2019-01-24:/posts/2019-01-24T0000_pelican-ji-shi-taitoru.html</id><summary type="html">resのテスト</summary><content type="html">&lt;div class="section" id="h1"&gt;
+&lt;h2&gt;h1&lt;/h2&gt;
+&lt;div class="section" id="h2"&gt;
+&lt;h3&gt;h2&lt;/h3&gt;
+&lt;div class="section" id="h3"&gt;
+&lt;h4&gt;h3&lt;/h4&gt;
+&lt;div class="section" id="h4"&gt;
+&lt;h5&gt;h4&lt;/h5&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;print(hello)&lt;/tt&gt;&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;引用はインデントで&lt;/dt&gt;
+&lt;dd&gt;（ここは引用）&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;list1&lt;/li&gt;
+&lt;li&gt;list2&lt;/li&gt;
+&lt;li&gt;list3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;aaaa&lt;/li&gt;
+&lt;li&gt;bb&lt;/li&gt;
+&lt;li&gt;cccc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://exsample.com"&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# ここはコードブロックです&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;備考&lt;/p&gt;
+&lt;p class="last"&gt;これは注釈です&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="test"></category></entry><entry><title>なぜだっ！！pipが動かない \_(꒪ཀ꒪」∠)_ proxyだってちゃんと設定したのに…、の時に。</title><link href="https://dyesac.github.io/posts/2019-01-22T0000_nazedatsupipgadong-kanai-_jjutkjjut-_-proxydatsutechiyantoshe-ding-shitanoni-noshi-ni.html" rel="alternate"></link><published>2019-01-22T00:00:00+09:00</published><updated>2019-01-22T00:00:00+09:00</updated><author><name>dyesac</name></author><id>tag:dyesac.github.io,2019-01-22:/posts/2019-01-22T0000_nazedatsupipgadong-kanai-_jjutkjjut-_-proxydatsutechiyantoshe-ding-shitanoni-noshi-ni.html</id><summary type="html">&lt;p&gt;ずーっと原因不明のまま放置していたpipの不具合が解消しました。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;環境&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;MacOs &lt;span class="m"&gt;10&lt;/span&gt;.14.2
+pyenv &lt;span class="m"&gt;1&lt;/span&gt;.2.0
+Python &lt;span class="m"&gt;3&lt;/span&gt;.6.0
+pip &lt;span class="m"&gt;18&lt;/span&gt;.1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Proxyはちゃんと通っているよね？&lt;/h2&gt;
+&lt;h3&gt;proxyの設定方法&lt;/h3&gt;
+&lt;p&gt;".bash_profile"にProxyの情報を記載します！&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ vim  ~/.bash_profile
+
+&lt;span class="c1"&gt;# .bash_profile&lt;/span&gt;
+&lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; http://xxx.xxx.xxx.xxx:xxxx
+&lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$HTTP_PROXY&lt;/span&gt;
+&lt;span class="nv"&gt;ALL_PROXY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$HTTP_PROXY&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;で、".bash_profile"を読み込み直します&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;windowsの場合&lt;/h5&gt;
+&lt;p&gt;コマンドプロンプトから環境変数を設定します。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://&lt;span class="o"&gt;{&lt;/span&gt;UserName&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;Password&lt;span class="o"&gt;}&lt;/span&gt;@&lt;span class="o"&gt;{&lt;/span&gt;proxy.server&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;port&lt;span class="o"&gt;}&lt;/span&gt;
+$ &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://&lt;span class="o"&gt;{&lt;/span&gt;UserName&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;Password&lt;span class="o"&gt;}&lt;/span&gt;@&lt;span class="o"&gt;{&lt;/span&gt;proxy.server&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;port&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;pipのオプションでする場合&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install &amp;lt;パッケージ名&amp;gt; --proxy http://xxx.xxx.xxx.xxx:xxxx
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;pipの不能は突然に&lt;/h2&gt;
+&lt;p&gt;使えていたはずのpipが使えない？？ネットワーク環境の変更に伴う、proxyの設定だったり、一部ネットワーク環境ではcntlmを利用していたり、pyenvの環境によって違う？など、、適当に使ってきた影響でぐちゃぐちゃで何が原因かさっぱり理解できない状況になっていました。&lt;/p&gt;
+&lt;h3&gt;症状について&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install &amp;lt;package&amp;gt;
+Collecting &amp;lt;package&amp;gt;
+  Could not find a version that satisfies the requirement &amp;lt;package&amp;gt; &lt;span class="o"&gt;(&lt;/span&gt;from versions: &lt;span class="o"&gt;)&lt;/span&gt;
+No matching distribution found &lt;span class="k"&gt;for&lt;/span&gt; &amp;lt;package&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;と、、versionがない？と。。そんなはずはない！！！&lt;/p&gt;
+&lt;p&gt;過去にはネットワークのエラーが原因で、pipが利用できないことがあったので、同様に、ネットワークが原因でこんなエラーメッセージが出てるのかも？？とおもったのですが、&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip search &amp;lt;package&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;は通るのです。。ちゃんと。&lt;/p&gt;
+&lt;p&gt;原因がわからないまま月日は流れ、どうしても必要なパッケージがある時は、pypiからDLしてきて手動でインストールするという、苦行をしておりました。関連するパッケージが複数あることもしょっちゅうで、こんなに関連パッケージあるんだーーーっ（いつになったら目的のパッケージが入るのじゃorz）と勉強になったものの、やってられない日々が続きまして。&lt;/p&gt;
+&lt;p&gt;が、やっと解決できたので、同じような症状に嘆き悲しむ方々の少しでも助けになればと思い、対処した内容について記録しておきます&lt;/p&gt;
+&lt;h2&gt;原因はSSL/TLSでの通信エラー&lt;/h2&gt;
+&lt;p&gt;詳細な原因については理解しきれていないのですが、SSL/TLSで利用している証明書の有無が原因だったようです。 homebrew でインストールした open-ssl の証明書の配置されるディレクトリに問題がある？のか。&lt;/p&gt;
+&lt;p&gt;pip(python) からSSL/TLS通信する際の証明書が見つからず、エラーが発生していたようです。&lt;/p&gt;
+&lt;p&gt;英語でのやりとりが難しく、ちゃんと理解できていないかもしれないので詳しくは&lt;a href="https://github.com/Homebrew/legacy-homebrew/issues/41253"&gt;こちら&lt;/a&gt;のやりとりを確認してもらいたいですが、確信の部分をすっごく意訳すると。&lt;/p&gt;
+&lt;p&gt;（・・・略・・・）&lt;/p&gt;
+&lt;p&gt;（回答者）以下、証明書、鍵はがあるか？&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/etc/ssl/certs/ca-certificates.crt&amp;quot;&lt;/span&gt;,
+&lt;span class="s2"&gt;&amp;quot;/etc/pki/tls/certs/ca-bundle.crt&amp;quot;&lt;/span&gt;,
+&lt;span class="s2"&gt;&amp;quot;/etc/ssl/ca-bundle.pem&amp;quot;&lt;/span&gt;,
+&lt;span class="s2"&gt;&amp;quot;/etc/ssl/cert.pem&amp;quot;&lt;/span&gt;,
+&lt;span class="s2"&gt;&amp;quot;/usr/local/share/certs/ca-root-nss.crt&amp;quot;&lt;/span&gt;,
+&lt;span class="s2"&gt;&amp;quot;/usr/local/etc/openssl/cert.pem&amp;quot;&lt;/span&gt;,
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;（質問者）以下のものしかない&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/etc/pki/tls/certs/ca-bundle.crt&amp;quot;&lt;/span&gt;,
+&lt;span class="s2"&gt;&amp;quot;/usr/local/etc/openssl/cert.pem&amp;quot;&lt;/span&gt;,
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;（回答者） きっと"/etc"にすれば直るよー&lt;/p&gt;
+&lt;p&gt;（・・・略・・・）&lt;/p&gt;
+&lt;p&gt;で、解決したそうです。&lt;/p&gt;
+&lt;h3&gt;実際、何をしたか&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/local/etc/openssl/cert.pem&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;を、以下にもコピーしました。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/etc/ssl/cert.pem&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;で、再起動したらpipが正常に動くようになっていました &lt;strong&gt;∩( ･ω･)∩ばんざーい&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;https://github.com/Homebrew/legacy-homebrew/issues/41253&lt;/li&gt;
+&lt;/ul&gt;</content><category term="pip"></category><category term="Python"></category><category term="troubleShooting"></category></entry><entry><title>Pythonとgithubではじめる無料ブログ</title><link href="https://dyesac.github.io/posts/2019-01-21T0000_Get_start_freeBlog_with_python_and_github.html" rel="alternate"></link><published>2019-01-21T00:00:00+09:00</published><updated>2019-01-21T00:00:00+09:00</updated><author><name>dyesac</name></author><id>tag:dyesac.github.io,2019-01-21:/posts/2019-01-21T0000_Get_start_freeBlog_with_python_and_github.html</id><summary type="html">&lt;p&gt;Python(Pelican)で静的サイトを生成してgithubで公開します！&lt;/p&gt;</summary><content type="html">&lt;p&gt;ありがとう！そしてサヨナラ...WP&lt;/p&gt;
+&lt;h2&gt;Pelican のインストール&lt;/h2&gt;
+&lt;p&gt;pipでインストールします。markdownで描きたいので、一緒にmarkdownも。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~ $ pip install pelican markdown
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;pelican用のディレクトリを作成します&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~ $ mkdir Peclican
+~ $ &lt;span class="nb"&gt;cd&lt;/span&gt; Pelican 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;pelicanには、ブログの雛形を生成してくれる便利なコマンドがあるので &lt;code&gt;pelican-quickstart&lt;/code&gt; で質問に答えていくとブログが出来上がります。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Pelican $ pelican-quickstart
+Welcome to pelican-quickstart v4.0.1.
+
+This script will &lt;span class="nb"&gt;help&lt;/span&gt; you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+
+&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; .
+&amp;gt; What will be the title of this web site? I couldn&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;t understood &lt;span class="s2"&gt;&amp;quot;it&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;until&lt;/span&gt; yesterday.
+&amp;gt; Who will be the author of this web site? dyesac
+&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;ja&lt;span class="o"&gt;]&lt;/span&gt; ja
+&amp;gt; Do you want to specify a URL prefix? e.g., https://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; What is your URL prefix? &lt;span class="o"&gt;(&lt;/span&gt;see above example&lt;span class="p"&gt;;&lt;/span&gt; no trailing slash&lt;span class="o"&gt;)&lt;/span&gt; dyesac.github.io
+&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
+&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Tokyo
+&amp;gt; Do you want to generate a tasks.py/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Done. Your new project is available at /Users/****/Documents/Pelican/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;こんな感じのディレクトリができます&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Pelican/
+├── content
+├── output
+├── develop_server.sh
+├── fabfile.py
+├── Makefile
+├── pelicanconf.py       
+└── publishconf.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Pelicanのテーマを導入&lt;/h3&gt;
+&lt;h3&gt;記事ページの生成と確認&lt;/h3&gt;
+&lt;h2&gt;Githubのリポジトリをつくる&lt;/h2&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://daikishimada.github.io/pelican-start.html"&gt;PELICAN + GITHUB PAGES でブログを作った話&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mae.chab.in/archives/60095"&gt;GitHub Pagesに独自ドメインを設定してHTTPS化する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiita.com/ogrew/items/ecef0a4700d5bd4d875d"&gt;Pythonの静的サイトジェネレータ"Pelican"でお手軽にブログをはじめる手順&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Pelican"></category><category term="Python"></category><category term="blog"></category></entry></feed>
