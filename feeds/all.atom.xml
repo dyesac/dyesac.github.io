@@ -1,137 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>no2s</title><link href="https://dyesac.github.io/" rel="alternate"></link><link href="https://dyesac.github.io/feeds/all.atom.xml" rel="self"></link><id>https://dyesac.github.io/</id><updated>2019-01-24T00:00:00+09:00</updated><entry><title>Pelican 記事タイトル</title><link href="https://dyesac.github.io/posts/2019-01-24T0000_pelican-ji-shi-taitoru.html" rel="alternate"></link><published>2019-01-24T00:00:00+09:00</published><updated>2019-01-24T00:00:00+09:00</updated><author><name>dyesac</name></author><id>tag:dyesac.github.io,2019-01-24:/posts/2019-01-24T0000_pelican-ji-shi-taitoru.html</id><summary type="html">resのテスト</summary><content type="html">&lt;div class="section" id="h1"&gt;
-&lt;h2&gt;h1&lt;/h2&gt;
-&lt;div class="section" id="h2"&gt;
-&lt;h3&gt;h2&lt;/h3&gt;
-&lt;div class="section" id="h3"&gt;
-&lt;h4&gt;h3&lt;/h4&gt;
-&lt;div class="section" id="h4"&gt;
-&lt;h5&gt;h4&lt;/h5&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;print(hello)&lt;/tt&gt;&lt;/p&gt;
-&lt;dl class="docutils"&gt;
-&lt;dt&gt;引用はインデントで&lt;/dt&gt;
-&lt;dd&gt;（ここは引用）&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;list1&lt;/li&gt;
-&lt;li&gt;list2&lt;/li&gt;
-&lt;li&gt;list3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;aaaa&lt;/li&gt;
-&lt;li&gt;bb&lt;/li&gt;
-&lt;li&gt;cccc&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://exsample.com"&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# ここはコードブロックです&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="admonition note"&gt;
-&lt;p class="first admonition-title"&gt;備考&lt;/p&gt;
-&lt;p class="last"&gt;これは注釈です&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content><category term="test"></category></entry><entry><title>なぜだっ！！pipが動かない \_(꒪ཀ꒪」∠)_ proxyだってちゃんと設定したのに…、の時に。</title><link href="https://dyesac.github.io/posts/2019-01-22T0000_nazedatsupipgadong-kanai-_jjutkjjut-_-proxydatsutechiyantoshe-ding-shitanoni-noshi-ni.html" rel="alternate"></link><published>2019-01-22T00:00:00+09:00</published><updated>2019-01-22T00:00:00+09:00</updated><author><name>dyesac</name></author><id>tag:dyesac.github.io,2019-01-22:/posts/2019-01-22T0000_nazedatsupipgadong-kanai-_jjutkjjut-_-proxydatsutechiyantoshe-ding-shitanoni-noshi-ni.html</id><summary type="html">&lt;p&gt;ずーっと原因不明のまま放置していたpipの不具合が解消しました。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;環境&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;MacOs &lt;span class="m"&gt;10&lt;/span&gt;.14.2
-pyenv &lt;span class="m"&gt;1&lt;/span&gt;.2.0
-Python &lt;span class="m"&gt;3&lt;/span&gt;.6.0
-pip &lt;span class="m"&gt;18&lt;/span&gt;.1
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Proxyはちゃんと通っているよね？&lt;/h2&gt;
-&lt;h3&gt;proxyの設定方法&lt;/h3&gt;
-&lt;p&gt;".bash_profile"にProxyの情報を記載します！&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ vim  ~/.bash_profile
-
-&lt;span class="c1"&gt;# .bash_profile&lt;/span&gt;
-&lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; http://xxx.xxx.xxx.xxx:xxxx
-&lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$HTTP_PROXY&lt;/span&gt;
-&lt;span class="nv"&gt;ALL_PROXY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$HTTP_PROXY&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;で、".bash_profile"を読み込み直します&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;source&lt;/span&gt; ~/.bash_profile
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;windowsの場合&lt;/h5&gt;
-&lt;p&gt;コマンドプロンプトから環境変数を設定します。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;HTTP_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://&lt;span class="o"&gt;{&lt;/span&gt;UserName&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;Password&lt;span class="o"&gt;}&lt;/span&gt;@&lt;span class="o"&gt;{&lt;/span&gt;proxy.server&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;port&lt;span class="o"&gt;}&lt;/span&gt;
-$ &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;HTTPS_PROXY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://&lt;span class="o"&gt;{&lt;/span&gt;UserName&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;Password&lt;span class="o"&gt;}&lt;/span&gt;@&lt;span class="o"&gt;{&lt;/span&gt;proxy.server&lt;span class="o"&gt;}&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;port&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;pipのオプションでする場合&lt;/h5&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install &amp;lt;パッケージ名&amp;gt; --proxy http://xxx.xxx.xxx.xxx:xxxx
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;pipの不能は突然に&lt;/h2&gt;
-&lt;p&gt;使えていたはずのpipが使えない？？ネットワーク環境の変更に伴う、proxyの設定だったり、一部ネットワーク環境ではcntlmを利用していたり、pyenvの環境によって違う？など、、適当に使ってきた影響でぐちゃぐちゃで何が原因かさっぱり理解できない状況になっていました。&lt;/p&gt;
-&lt;h3&gt;症状について&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install &amp;lt;package&amp;gt;
-Collecting &amp;lt;package&amp;gt;
-  Could not find a version that satisfies the requirement &amp;lt;package&amp;gt; &lt;span class="o"&gt;(&lt;/span&gt;from versions: &lt;span class="o"&gt;)&lt;/span&gt;
-No matching distribution found &lt;span class="k"&gt;for&lt;/span&gt; &amp;lt;package&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;と、、versionがない？と。。そんなはずはない！！！&lt;/p&gt;
-&lt;p&gt;過去にはネットワークのエラーが原因で、pipが利用できないことがあったので、同様に、ネットワークが原因でこんなエラーメッセージが出てるのかも？？とおもったのですが、&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip search &amp;lt;package&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;は通るのです。。ちゃんと。&lt;/p&gt;
-&lt;p&gt;原因がわからないまま月日は流れ、どうしても必要なパッケージがある時は、pypiからDLしてきて手動でインストールするという、苦行をしておりました。関連するパッケージが複数あることもしょっちゅうで、こんなに関連パッケージあるんだーーーっ（いつになったら目的のパッケージが入るのじゃorz）と勉強になったものの、やってられない日々が続きまして。&lt;/p&gt;
-&lt;p&gt;が、やっと解決できたので、同じような症状に嘆き悲しむ方々の少しでも助けになればと思い、対処した内容について記録しておきます&lt;/p&gt;
-&lt;h2&gt;原因はSSL/TLSでの通信エラー&lt;/h2&gt;
-&lt;p&gt;詳細な原因については理解しきれていないのですが、SSL/TLSで利用している証明書の有無が原因だったようです。 homebrew でインストールした open-ssl の証明書の配置されるディレクトリに問題がある？のか。&lt;/p&gt;
-&lt;p&gt;pip(python) からSSL/TLS通信する際の証明書が見つからず、エラーが発生していたようです。&lt;/p&gt;
-&lt;p&gt;英語でのやりとりが難しく、ちゃんと理解できていないかもしれないので詳しくは&lt;a href="https://github.com/Homebrew/legacy-homebrew/issues/41253"&gt;こちら&lt;/a&gt;のやりとりを確認してもらいたいですが、確信の部分をすっごく意訳すると。&lt;/p&gt;
-&lt;p&gt;（・・・略・・・）&lt;/p&gt;
-&lt;p&gt;（回答者）以下、証明書、鍵はがあるか？&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/etc/ssl/certs/ca-certificates.crt&amp;quot;&lt;/span&gt;,
-&lt;span class="s2"&gt;&amp;quot;/etc/pki/tls/certs/ca-bundle.crt&amp;quot;&lt;/span&gt;,
-&lt;span class="s2"&gt;&amp;quot;/etc/ssl/ca-bundle.pem&amp;quot;&lt;/span&gt;,
-&lt;span class="s2"&gt;&amp;quot;/etc/ssl/cert.pem&amp;quot;&lt;/span&gt;,
-&lt;span class="s2"&gt;&amp;quot;/usr/local/share/certs/ca-root-nss.crt&amp;quot;&lt;/span&gt;,
-&lt;span class="s2"&gt;&amp;quot;/usr/local/etc/openssl/cert.pem&amp;quot;&lt;/span&gt;,
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;（質問者）以下のものしかない&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/etc/pki/tls/certs/ca-bundle.crt&amp;quot;&lt;/span&gt;,
-&lt;span class="s2"&gt;&amp;quot;/usr/local/etc/openssl/cert.pem&amp;quot;&lt;/span&gt;,
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;（回答者） きっと"/etc"にすれば直るよー&lt;/p&gt;
-&lt;p&gt;（・・・略・・・）&lt;/p&gt;
-&lt;p&gt;で、解決したそうです。&lt;/p&gt;
-&lt;h3&gt;実際、何をしたか&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/local/etc/openssl/cert.pem&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;を、以下にもコピーしました。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/etc/ssl/cert.pem&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;で、再起動したらpipが正常に動くようになっていました &lt;strong&gt;∩( ･ω･)∩ばんざーい&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;https://github.com/Homebrew/legacy-homebrew/issues/41253&lt;/li&gt;
-&lt;/ul&gt;</content><category term="pip"></category><category term="Python"></category><category term="troubleShooting"></category></entry><entry><title>Pythonとgithubではじめる無料ブログ</title><link href="https://dyesac.github.io/posts/2019-01-21T0000_Get_start_freeBlog_with_python_and_github.html" rel="alternate"></link><published>2019-01-21T00:00:00+09:00</published><updated>2019-01-21T00:00:00+09:00</updated><author><name>dyesac</name></author><id>tag:dyesac.github.io,2019-01-21:/posts/2019-01-21T0000_Get_start_freeBlog_with_python_and_github.html</id><summary type="html">&lt;p&gt;Python(Pelican)で静的サイトを生成してgithubで公開します！&lt;/p&gt;</summary><content type="html">&lt;p&gt;ありがとう！そしてサヨナラ...WP&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ConnPath</title><link href="https://dyesac.github.io/" rel="alternate"></link><link href="https://dyesac.github.io/feeds/all.atom.xml" rel="self"></link><id>https://dyesac.github.io/</id><updated>2019-01-21T00:00:00+09:00</updated><entry><title>Pythonとgithubではじめる静的ブログ</title><link href="https://dyesac.github.io/posts/2019-01-21T0000_Get_start_freeBlog_with_python_and_github.html" rel="alternate"></link><published>2019-01-21T00:00:00+09:00</published><updated>2019-01-21T00:00:00+09:00</updated><author><name>dyesac</name></author><id>tag:dyesac.github.io,2019-01-21:/posts/2019-01-21T0000_Get_start_freeBlog_with_python_and_github.html</id><summary type="html">&lt;p&gt;Python(Pelican)で静的サイトを生成してgithubで公開します！&lt;/p&gt;</summary><content type="html">&lt;p&gt;かなしい思いでは置いておいて、、、&lt;/p&gt;
 &lt;h2&gt;Pelican のインストール&lt;/h2&gt;
-&lt;p&gt;pipでインストールします。markdownで描きたいので、一緒にmarkdownも。&lt;/p&gt;
+&lt;p&gt;pipでインストールします。markdownで書く場合は、一緒にmarkdownも。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~ $ pip install pelican markdown
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -186,11 +56,77 @@ Done. Your new project is available at /Users/****/Documents/Pelican/
 
 
 &lt;h3&gt;Pelicanのテーマを導入&lt;/h3&gt;
+&lt;h4&gt;テーマファイルのDL&lt;/h4&gt;
+&lt;p&gt;同フォルダに &lt;code&gt;./themes&lt;/code&gt; を作成してその中に、テーマファイルを格納します。テーマは &lt;a href="http://www.pelicanthemes.com/"&gt;コチラ&lt;/a&gt; でたくさん公開されています。いくつか中でシンプルで多機能そうな &lt;a href="https://github.com/robulouski/voidy-bootstrap"&gt;&lt;strong&gt;voidy-bootstrap&lt;/strong&gt;&lt;/a&gt; をまずは採用してみることにしました。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Pelican $ mkdir themes
+Pelican $ &lt;span class="nb"&gt;cd&lt;/span&gt; themes
+themes $ git clone https://github.com/robulouski/voidy-bootstrap.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;テーマの反映&lt;/h4&gt;
+&lt;p&gt;テーマを反映するためには&lt;code&gt;pelicanconf.py&lt;/code&gt; にテーマの設定を追記してあげます&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;themes $ &lt;span class="nb"&gt;cd&lt;/span&gt; ../
+Pelican $ vim pelicanconf.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;で、適当な位置に以下を一行追加して保存します。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;THEME = &amp;#39;./themes/voidy-bootstrap/&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;これでテーマが反映されます。&lt;/p&gt;
 &lt;h3&gt;記事ページの生成と確認&lt;/h3&gt;
+&lt;p&gt;記事は &lt;code&gt;./content&lt;/code&gt; 以下にテキストファイルとして reStructureText(.rst) またはMarkdwon(.md)で作成していきます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Pelcian $ vim content/first_post.md
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;で、タイトルやタグなどのメタデータはお作法があります。テキストファイルのあたまに&lt;code&gt;{metadata}:&lt;/code&gt; の形式で記述してあげます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;タイトル&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt; &lt;span class="mi"&gt;00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;memo&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first_post&lt;/span&gt;
+&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;dyesac&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;ポストのサマリ&lt;/span&gt;
+
+&lt;span class="o"&gt;(---&lt;/span&gt;&lt;span class="err"&gt;ここまで&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Pelican&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;用のメタデータです。&lt;/span&gt;&lt;span class="o"&gt;---)&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="n"&gt;h1&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;list1&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;list2&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;list3&lt;/span&gt;
+&lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="n"&gt;h2&lt;/span&gt;
+&lt;span class="err"&gt;​```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;helloworld&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hellow World&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;__main__&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;helloworld&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+&lt;span class="err"&gt;​```&lt;/span&gt;
+&lt;span class="err"&gt;###&lt;/span&gt; &lt;span class="n"&gt;h3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;記事の生成&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Pelican $ make html
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Githubのリポジトリをつくる&lt;/h2&gt;
+&lt;h2&gt;経緯（かなしい過去の思い出）&lt;/h2&gt;
+&lt;p&gt;その昔、、RED HAT のOPENSHIFTというサービスにWordpressをいれてしばらくブログとして活用していました。PVはすくなく、自分のメモがわりにつけていたブログには無料枠の範囲でも十分な性能で、インターネッツの知識に乏しい私でもなんとなーく、運用ができるくらいで、非常に使い勝手の良く使わせてもらっていたのですが、、&lt;/p&gt;
+&lt;h4&gt;突然のバージョンアップと無料枠の変更 orz&lt;/h4&gt;
+&lt;p&gt;実際は、半年ほど前から「提供内容かわるからバックアップとるなり、なんなりしなよー」というメールがきていたのですが、、なにせ英語だからちゃんと読まずに読み飛ばしていました。結果、キレイに全データは消えてなくってしまいましたとさ orz&lt;/p&gt;
+&lt;p&gt;多くはありませんが3年ほどかけて書きためた（北海道一周旅行の軌跡をGoogleMapにプロットしたヤツどっかに残ってないかな〜。。）テキストが消えてしまった喪失感から、しばらく、、メモや記録を残すことから遠ざかってきました。。&lt;/p&gt;
+&lt;h4&gt;Github のFREEプランでプライベートリポジトリが利用可能に！&lt;/h4&gt;
+&lt;p&gt;なんて、2019年、新年のニュースにワーワー、よく分からないけど、すごーい、使ってみよう！となったのがキッカケで Github Page ってんのが、静的サイトがホスティングできるし、ソースはそのまま、プライベートリポジトリに置いておけば、バックアップも完璧じゃーーーん！！サイコー！うひょー！ということで、気をとりなおして ブログを再開してみることにいたしました。本当に、データの管理は大切ですね。&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://daikishimada.github.io/pelican-start.html"&gt;PELICAN + GITHUB PAGES でブログを作った話&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://mae.chab.in/archives/60095"&gt;GitHub Pagesに独自ドメインを設定してHTTPS化する&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://qiita.com/ogrew/items/ecef0a4700d5bd4d875d"&gt;Pythonの静的サイトジェネレータ"Pelican"でお手軽にブログをはじめる手順&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://qiita.com/_rdtr/items/8052d2595825f8bc6c2b"&gt;Python製静的ブログ生成ツール'Pelican'の各種設定&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Pelican"></category><category term="Python"></category><category term="blog"></category></entry></feed>
